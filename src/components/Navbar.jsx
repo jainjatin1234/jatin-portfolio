@@ -41,7 +41,7 @@ const Navbar = () => {
       
           </ul>
         </div>
-        <motion.div className="hidden md:block">
+        {/* <motion.div className="hidden md:block">
           <div className="flex  font-semibold  hover:bg-black hover:text-white text-center justify-center items-center gap-2 border border-black px-4 py-1 rounded-full transition-all duration-300 ease-in">
             <a
               href="/public/myresume (21).pdf"
@@ -52,8 +52,22 @@ const Navbar = () => {
             </a>
             <FaArrowDown className="" />
           </div>
-        </motion.div>
-      </div>
+        </motion.div> */}
+
+<div className="btn-container">
+  <button
+    className="btn btn-color-2 flex  font-semibold  hover:bg-black hover:text-white text-center justify-center items-center gap-2 border border-black px-4 py-1 rounded-full transition-all duration-300 ease-in"
+    onClick={() => {
+      const link = document.createElement("a");
+      link.href = "/public/jatin_resume.pdf";
+      link.download = "My_Resume.pdf";
+      link.click();
+    }}
+  >
+    Download CV
+  </button>
+</div>
+
       <div
         className={`flex flex-col items-center justify-center text-center md:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40 transition-opacity duration-300 ease-in-out ${
           mobileNav ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -93,17 +107,8 @@ const Navbar = () => {
             About
           </li>
         </ul>
-        {/* <div className="flex my-3 mx-4 hover:bg-black hover:text-white text-center justify-center items-center gap-2 md:border md:border-black px-2 py-1 rounded-full transition-all duration-300 ease-in">
-          <a
-            href="/public/myresume (21).pdf"
-            className="text-center"
-            download
-          >
-            Resume
-          </a>
-          <FaArrowRight className="hover:translate-x-1 transition-transform duration-300 ease-in-out" />
-        </div> */}
-      </div>
+        </div>
+    </div>
     </>
   );
 };
