@@ -133,7 +133,7 @@ const Landing = () => {
               );
             })}
             <img
-              src="/public/kk.avif"
+              src="/kk.avif"
               alt="Jatin Image"
               className="rounded-full brightness-110  md:w-72 md:h-72 w-56 h-56 object-cover rotate-[0deg]"
             />
