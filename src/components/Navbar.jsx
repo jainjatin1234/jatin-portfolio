@@ -59,7 +59,7 @@ const Navbar = () => {
     className="btn btn-color-2 flex  font-semibold  hover:bg-black hover:text-white text-center justify-center items-center gap-2 border border-black px-4 py-1 rounded-full transition-all duration-300 ease-in"
     onClick={() => {
       const link = document.createElement("a");
-      link.href = "/public/jatin-resume.pdf";
+      link.href = "/jatin-resume.pdf";
       link.download = "My_Resume.pdf";
       link.click();
     }}
